@@ -47,6 +47,7 @@ model = None
 
 def download_model_from_s3():
     url = "https://hmodel.s3.eu-north-1.amazonaws.com/model2.pth"
+    response = requests.get(url)
     local_path = "model2.pth"
 
     if os.path.exists(local_path):
